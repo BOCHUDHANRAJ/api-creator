@@ -1,3 +1,6 @@
+
+//  to see the data on page
+
 $(document).ready(function(){
 var product_available_variants = {{ product.variants | json }};
                      var employeesJSON = 
