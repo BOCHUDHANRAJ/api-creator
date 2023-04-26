@@ -1,0 +1,31 @@
+$(document).ready(function(){
+var product_available_variants = {{ product.variants | json }};
+                     var employeesJSON = 
+                   [
+                   "id" = "32379485749341",
+                    "title" = "Azure",
+                   "option1" = "Azure",
+                    "option1"= "null",
+                     "option1"= "null",
+                      "sku "= "EEI-4047-AZU-SET",
+                     "available" = "false",
+                   ];
+            
+            var JSONString = JSON.stringify(employeesJSON);
+              var employeesJSON = JSON.parse(JSONString);
+
+            var result = '';
+
+            $.each(employeesJSON, function (i, item) {
+                result += 'id = ' + item.id + '<br/>';
+                result += 'title = ' + item.title + '<br/>';
+                result += 'option1 = ' + item.option1 + '<br/>';
+                 result += 'option1 = ' + item.option2 + '<br/>';
+                 result += 'option1 = ' + item.option3 + '<br/>';
+                 result += 'sku = ' + item.sku + '<br/>';
+                 result += 'available = ' + item.available + '<br/><br/><br/>';
+               
+            });
+
+            $('#resultDiv').html(result);
+            )};
