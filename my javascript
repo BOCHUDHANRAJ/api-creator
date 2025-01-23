@@ -40,3 +40,14 @@ For Query Selector:
   });
 });
 
+document.addEventListener("DOMContentLoaded",function(){
+ let element = localStorage.setItem("name","Dhanraj");
+    let getelement = localStorage.getItem("name");
+    console.log(getelement);
+let element2 = sessionStorage.setItem("name","Dhanraj");  
+     let getelement2 = sessionStorage.getItem("name");
+    console.log(getelement2);
+    document.cookie="cookie1=test;"
+   let decodedCookie = decodeURIComponent(document.cookie); 
+    console.log(decodedCookie);
+  })
