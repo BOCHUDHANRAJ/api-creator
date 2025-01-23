@@ -32,3 +32,11 @@ var product_available_variants = {{ product.variants | json }};
 
             $('#resultDiv').html(result);
             )};
+For Query Selector:
+ document.addEventListener("DOMContentLoaded", function () {
+  let elements = document.getElementsByClassName("card-link");
+  Array.from(elements).forEach((element) => {
+    console.log(element.textContent);
+  });
+});
+
